@@ -18,11 +18,17 @@
 
 ## How To Use
 
-[![DEMO](img/app-usage.jpg)](https://www.youtube.com/watch?v=1h58oDgMr5k)
+<a href="https://www.youtube.com/watch?v=1h58oDgMr5k">
+         <img src="img/app_usage.jpg"
+         width=150" height="70">
+      </a>
 
 
 
-## Emailware
+
+
+
+## Feedback
 
 If you have any feedback, please reach out to me at shubham3279@gmail.com . I'd really appreciate it.
 
