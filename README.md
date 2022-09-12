@@ -20,7 +20,7 @@
 
 <a href="https://www.youtube.com/watch?v=1h58oDgMr5k">
          <img src="img/app_usage.jpg"
-         width=1000" height="800">
+         width=1200" height="800">
       </a>
 
 
