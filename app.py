@@ -1,3 +1,4 @@
+from pickle import NONE
 import joblib
 import pandas as pd
 import streamlit as st
@@ -5,7 +6,6 @@ import requests
 
 movies = joblib.load('final_movies_dataframe.sav')
 similarity_matrix_model = joblib.load('similarity_matrix_model.sav')
-
 
 def fetch_movie_data(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=d4fdc3d43a59e7f277b25135aa6af59d".format(movie_id)
@@ -18,8 +18,6 @@ def fetch_movie_data(movie_id):
 
     return movie_poster, movie_overview
 
-
-
 def recommend(movie):
     movie_index = movies[movies['title'] == movie].index[0]
     distances = sorted(list(enumerate(similarity_matrix_model[movie_index])), reverse=True, key=lambda x: x[1])
@@ -27,8 +25,6 @@ def recommend(movie):
     recommended_movie_names = []
     recommended_movie_posters = []
     recommended_movie_overviews = []
-
-    
 
     for i in distances[1:6]:
         
@@ -46,29 +42,40 @@ def recommend(movie):
 
     return recommended_movie_names,recommended_movie_posters, recommended_movie_overviews
 
-
-img = 'page_icon.png'
 st.set_page_config(
     page_title= 'PICK ME A FLICK', 
-    page_icon=img, 
+    page_icon='img\page_icon.png', 
     layout="wide", 
     initial_sidebar_state="auto", 
-    menu_items=None
-    )
+    menu_items= {
+        'Get help': None,
+        'Report a bug': 'https://github.com/shubham3279/PICK-ME-A-FLICK/discussions',
+        'About' : '''
+        # THANKS.
+        ##### Developed with 🖤 by ***SHUBHAM KUMAR***.
+        ###### His social links:
+        *  [Github](https://github.com/shubham3279)
 
+        '''
+    }
+)
 
-st.header(
+st.title(
     'PICK ME A FLICK'
-    )
+)
 
+st.caption(
+    'A content filtering based **Movie Recommendation Engine.**'
+)
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
-    "Type or select a movie from the dropdown",
+    "Type or select a movie from the dropdown.",
     movie_list
 )
 
 if st.button('Show Recommendations'):
+
     recommended_movie_names,recommended_movie_posters, recommended_movie_overviews = recommend(selected_movie)
     col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
