@@ -9,11 +9,15 @@
 
 <h4 align="center">A content filtering based movie recommendation engine that uses cosine-similarity metric to recommend five most similar movies for a given movie, based on tags corresponding to the movies.</h4>
 
+<div align="center">
 
 [![GitHub Stars](https://img.shields.io/github/stars/IgorAntun/node-chat.svg)](https://github.com/shubham3279/PICK-ME-A-FLICK)
 [![GitHub Issues](https://img.shields.io/github/issues/IgorAntun/node-chat.svg)](https://github.com/shubham3279/PICK-ME-A-FLICK)
 [![Current Version](https://img.shields.io/badge/version-1.0.7-green.svg)](https://github.com/shubham3279/PICK-ME-A-FLICK)
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://shubham3279-pick-me-a-flick-app-rl81a5.streamlitapp.com/)
+
+</div>
+
 
 
 ## How To Use
