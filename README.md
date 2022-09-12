@@ -20,9 +20,9 @@
 
 * CLick on the image below.
 		  
-<a href="https://www.youtube.com/watch?v=1h58oDgMr5k", target="_blank">
-<img src="img/app_usage.jpg" width="1200" height="800">
-</a>
+
+
+<a href="https://www.youtube.com/watch?v=1h58oDgMr5k" target="_blank"><img src="img/app_usage.jpg"  style="width:1200px;height:700px;"></a>
 
 
 
